@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumukshu Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo">Mumukshu Library</div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for anything...">
+        </div>
+    </header>
+
+    <div class="main-content">
+        <aside class="filters-sidebar">
+            <h3>Filter By</h3>
+            <div id="filters-container">
+                <!-- Filter sections will be generated here -->
+            </div>
+            <button id="resetFilters" class="reset-button">Reset All Filters</button>
+        </aside>
+
+        <main class="results-grid" id="library-container">
+            <div id="loading" class="loading-indicator">
+                <div class="spinner"></div>
+                <p>Loading the library...</p>
+            </div>
+            <!-- Library items will be injected here -->
+        </main>
+    </div>
+
+    <!-- Modal for item details (hidden by default) -->
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-body">
+                <!-- Detailed item info will be injected here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
